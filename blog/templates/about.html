@@ -1,0 +1,67 @@
+{% extends "index.html" %} {% block content %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+    <div class="page-wrapper">
+        <div class="blog-list clearfix">
+            <!--@@@@@@@-->
+            <h1>Wellcome to <a href="kahini.herokuapp.com">kahini.herokuapp.com</a></h1>
+            <p>kahini.herokuapp will discuss about some interesting bengali story which will blow your mind .<br> (এই সাইট এ সমস্ত প্রকারের বাংলা গল্প আপলোড করা হবে তার সাথে কিছু সত্যি ঘটনার ইতিহাস নিয়ে আলোচনা করা হবে এবং কিছু গুরুত্বপূর্ণ তথ্যের ওপর ব্লগ
+                তৈরি করা হবে।)</p>
+            <br>
+            <h1>What <a href="kahini.herokuapp.com">kahini.herokuapp</a> will upload?</h1>
+            <ol>
+                <li><a href="bengali-motivation">motivational story ( প্রেরণামূলক গল্প )</a></li>
+                <li><a href="rahasya">mysterical story ( রহস্য ধর্মী কাহিনী )</a></li>
+                <li><a href="true-bengali-incident">story based on true incident( সত্যি ঘটনার ইতিহাস )</a></li>
+                <li><a href="mojadar-information">intersting facts ( গুরুত্বপূর্ণ মজাদার তথ্য )</a></li>
+                <li><a href="bhoutik-kahini">horror story ( ভৌতিক কাহিনী )</a></li>
+                <li><a href="bengali-movie-review">other hollywood movie explain ( হলিউড মুভি )</a></li>
+            </ol>
+            <h1>Our social media platorm </h1>
+            <ol>
+                <li><a href="https://www.youtube.com/channel/UCWXRJJLNyuHg2tPbTNzc5fg">youTube</a>&nbsp;<i class="fa fa-youtube"></i></li>
+                <li><a href="https://www.instagram.com/kahini.herokuapp/">Instagram</a>&nbsp;<i class="fa fa-instagram"></i></li>
+                <li><a href="https://in.pinterest.com/kahiniHerokuapp">Pinterest</a>&nbsp;<i class="fa fa-pinterest"></i></li>
+
+            </ol>
+
+            <h1>Give suggestion or report</h1>
+            {% for item in messages %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Hello !</strong> {{item}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {% endfor %}
+            <form method="POST" action="report">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                    <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Discription</label>
+                    <textarea name="discription" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </form>
+
+
+
+
+
+            <!-- end blog-box -->
+        </div>
+        <!-- end blog-list -->
+    </div>
+    <!-- end page-wrapper -->
+
+    <hr class="invis">
+
+
+    <!-- end row -->
+</div>
+{% endblock %}
+<script>
+    alert('{{ message }}');
+</script>

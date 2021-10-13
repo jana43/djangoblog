@@ -1,0 +1,124 @@
+#logo-j {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 250px;
+}
+
+#logo2-j {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    width: 250px;
+}
+
+.social {
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center
+}
+
+#footer {
+    background-color: rgb(12, 12, 12);
+}
+
+#search-j {
+    margin-bottom: 20px;
+}
+
+#search-j input {
+    border: 1px solid blue;
+}
+
+#navbar-j {
+    background-color: aquamarine;
+}
+
+#content-j {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-j {
+    width: 80%;
+    padding: 10px;
+}
+
+#title-j {
+    display: flex;
+    flex-direction: row;
+}
+
+.thum {
+    width: 200px;
+    height: 150px;
+}
+
+#title-j p {
+    padding-left: 10px;
+}
+
+.right-j {
+    width: 20%;
+    padding: 10px;
+}
+
+.feature {
+    display: flex;
+}
+
+.feature img {
+    width: 50px;
+    height: 50px;
+    padding-right: 2px;
+}
+
+a {
+    text-decoration: none;
+    font-family: MyWebFont2;
+}
+
+p {
+    font-family: MyWebFont;
+    color: rgb(1, 1, 24);
+}
+
+h5 {
+    font-family: MyWebFont2;
+    color: rgb(255, 231, 13);
+}
+
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('Atma-Medium.ttf') format('truetype');
+    /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+    font-family: MyWebFont2;
+    src: url('Galada-Regular.ttf');
+}
+
+@media screen and (max-width: 800px) {
+    #content-j {
+        flex-direction: column;
+    }
+    .left-j {
+        width: 100%;
+    }
+    .right-j {
+        width: 100%;
+    }
+    #title-j {
+        flex-direction: column;
+    }
+    #title-j p {
+        padding: 0px;
+    }
+    .thum {
+        width: auto;
+        height: auto;
+    }
+}

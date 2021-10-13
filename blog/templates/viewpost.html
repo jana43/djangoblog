@@ -1,0 +1,39 @@
+{% extends "index.html" %} {% block content %}
+<div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+    <div class="page-wrapper">
+        <div class="blog-list clearfix">
+            <!--@@@@@@@-->
+            <p>{{page_data.content|safe}}</p>  
+        </div> 
+    </div>
+</div>
+<hr>
+<p><strong>related posts</strong></p>
+<br>
+{% for item in data %}
+    
+            <div class="story">
+                <div>
+                    <a href="{{item.slug}}">
+                        <h4>{{item.title}}</h4>
+                    </a>
+
+                </div>
+                <div id="title-j">
+                     <a href="{{item.slug}}">
+                        <div class="thum">
+
+                            <img src="{{item.image}}" / style="object-fit: cover; width:100%; height:100%">
+
+                        </div>
+                    </a>
+                    <p>{{item.content|slice:500|safe}}</p>
+                </div>
+                <div>
+                    <p style="color: brown;"><strong>date:- {{item.date}}</strong></p>
+                </div>
+
+
+            </div>
+            {% endfor %}
+{% endblock %}
